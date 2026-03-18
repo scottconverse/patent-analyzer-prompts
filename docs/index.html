@@ -261,12 +261,49 @@
             letter-spacing: 0.1em;
         }
 
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .comparison-card {
+            background: var(--card-bg);
+            border: 1px solid var(--rule);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        .comparison-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        .comparison-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .comparison-card li {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.6;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.4rem;
+        }
+        .comparison-card li::before {
+            position: absolute;
+            left: 0;
+        }
+        .comparison-card.prompts li::before { content: "\2713"; color: var(--green); }
+        .comparison-card.app li::before { content: "\2713"; color: var(--accent); }
+
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
             .stats { gap: 1.5rem; }
             .hero-cta { flex-direction: column; }
             .btn { text-align: center; }
             .feature-grid { grid-template-columns: 1fr; }
+            .comparison { grid-template-columns: 1fr; }
             .callout { padding: 1.25rem; }
         }
     </style>
@@ -453,11 +490,37 @@
 
 <section class="section">
     <div class="container">
-        <h2>Want It Fully Automated?</h2>
-        <p class="section-intro">If you'd rather skip the copy-paste and run everything with one click, there's also a free desktop app.</p>
-        <div class="callout callout-green">
-            <strong><a href="https://scottconverse.github.io/patent-analyzer-app" style="color: var(--green);">Patent Analyzer App</a> &mdash; Windows Desktop</strong>
-            Same 6-stage analysis, fully automated. Enter your invention, click one button, get a complete report. Requires an Anthropic API key (~$1 per analysis). Note: the API does not include web search, so prior art references come from the model's training data. For web-grounded prior art search, use this prompt system with Claude Pro or Gemini Advanced.
+        <h2>Prompt System vs. Desktop App</h2>
+        <p class="section-intro">Two ways to run the same 6-stage analysis. Choose what fits your workflow.</p>
+        <div class="comparison">
+            <div class="comparison-card prompts">
+                <h3>Prompt System (this project)</h3>
+                <ul>
+                    <li>Live web search for prior art</li>
+                    <li>Works in any browser, any platform</li>
+                    <li>No API key needed</li>
+                    <li>Included with Claude Pro or Gemini Advanced</li>
+                    <li>No software to install</li>
+                    <li>Manual orchestration (6 copy-pastes)</li>
+                    <li>Best prior art quality (web-grounded)</li>
+                </ul>
+            </div>
+            <div class="comparison-card app">
+                <h3><a href="https://scottconverse.github.io/patent-analyzer-app" style="color: var(--accent);">Desktop App</a> (free)</h3>
+                <ul>
+                    <li>One-click automated pipeline</li>
+                    <li>Real-time streaming output</li>
+                    <li>Auto-saves reports to disk</li>
+                    <li>Encrypted API key storage</li>
+                    <li>Requires Anthropic API key (~$1/run)</li>
+                    <li>Prior art from training data (no web search)</li>
+                    <li>Windows only</li>
+                </ul>
+            </div>
+        </div>
+        <div class="callout callout-green" style="margin-top: 1.5rem;">
+            <strong>Which should I use?</strong>
+            Use this prompt system if prior art accuracy matters most &mdash; live web search produces the best references. Use the desktop app if you want a one-click experience and don't mind that prior art comes from the model's training data rather than live search.
         </div>
     </div>
 </section>
