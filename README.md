@@ -8,6 +8,18 @@ No software to install. No API keys to configure. Just copy one prompt, paste it
 
 ---
 
+> **IMPORTANT LEGAL DISCLAIMER**
+>
+> **This tool does NOT provide legal advice. It is NOT a substitute for a registered patent attorney.** Patent decisions involve complex legal analysis that AI cannot reliably perform. Do not make filing decisions based solely on this tool's output.
+>
+> The analysis produced by these prompts does not create an attorney-client relationship, does not constitute a formal patentability or freedom-to-operate opinion, and may contain errors, omissions, or hallucinated references. AI-generated patent analysis can be confidently wrong — presenting fabricated patent numbers, outdated case law, or incorrect statutory interpretations as fact.
+>
+> **Always consult a registered patent attorney before making any filing, licensing, or enforcement decisions.**
+>
+> By using these prompts, you accept full responsibility for any actions taken based on their output. See the [Terms of Service](docs/terms.html) for complete legal terms.
+
+---
+
 ## Recommended Setup
 
 These prompts were developed, tested, and tuned on **Anthropic's Claude**. The preferred setup is:
