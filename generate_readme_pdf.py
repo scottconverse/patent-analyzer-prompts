@@ -21,7 +21,7 @@ GREEN_BG = HexColor("#e8f5e9")
 
 def build_pdf():
     doc = SimpleDocTemplate(
-        r"C:\Users\scott\Desktop\Claude\patent-attorney\PatentAnalyzer\PA prompt system\Patent-Analyzer-Prompt-System-README.pdf",
+        r"C:\Users\scott\Downloads\patent-analyzer-prompts-main\patent-analyzer-prompts-main\Patent-Analyzer-Prompt-System-README.pdf",
         pagesize=letter,
         topMargin=0.75*inch, bottomMargin=0.75*inch,
         leftMargin=0.85*inch, rightMargin=0.85*inch,
@@ -90,7 +90,7 @@ def build_pdf():
     # ===== TITLE =====
     story.append(Spacer(1, 40))
     story.append(Paragraph("Patent Analyzer", title_style))
-    story.append(Paragraph("Prompt System", subtitle_style))
+    story.append(Paragraph("Prompt System v1.2.0", subtitle_style))
     story.append(Paragraph(
         "<b>A 6-stage AI prompt pipeline that turns an invention description into a "
         "comprehensive patent feasibility analysis.</b>", body_bold))
@@ -157,7 +157,7 @@ def build_pdf():
             ["2 \u2014 Prior Art Search", "Searches patents, papers, products, and GitHub for existing work"],
             ["3 \u2014 Patentability Analysis", "Full \u00a7101/\u00a7102/\u00a7103/\u00a7112 statutory analysis with risk ratings"],
             ["4 \u2014 Deep Dive", "Specialized deep analysis of the most patentable and riskiest elements"],
-            ["5 \u2014 IP Strategy", "Filing recommendations, cost estimates, claim strategy"],
+            ["5 \u2014 IP Strategy", "Filing landscape assessment, cost estimates, claim strategy"],
             ["6 \u2014 Final Report", "Assembles everything into one comprehensive 10-section report"],
         ],
         col_widths=[2*inch, 4.5*inch]
@@ -273,8 +273,8 @@ def build_pdf():
         "Technical restatement in patent-ready language",
         "Prior art search across patents, papers, products, and open source",
         "Full patentability assessment (\u00a7101, \u00a7102, \u00a7103, \u00a7112)",
-        "Examiner rejection simulation",
-        "Filing strategy (provisional vs. non-provisional, timing, costs)",
+        "Common examiner concerns analysis for this technology area",
+        "Filing landscape assessment (provisional vs. non-provisional, timing, costs)",
         "Claim direction recommendations",
         "Risk scoring (0\u2013100) for each statutory category",
         "Documentation checklist",
@@ -305,7 +305,8 @@ def build_pdf():
     # ===== LEGAL DISCLAIMER =====
     story.append(Paragraph("Legal Disclaimer", h1))
     story.append(Paragraph(
-        "This prompt system provides <b>strategic patent-analysis support</b>, not legal advice.", body))
+        "This prompt system provides <b>AI-powered patent research support</b>, not legal advice. "
+        "The author of this tool is not a lawyer. The AI systems that execute these prompts are not lawyers.", body))
     for item in [
         "Does <b>not</b> create an attorney-client relationship",
         "Does <b>not</b> constitute a formal patentability or freedom-to-operate opinion",
