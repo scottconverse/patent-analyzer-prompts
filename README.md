@@ -6,7 +6,7 @@
 
 **A 6-stage AI prompt pipeline that turns an invention description into a comprehensive patent feasibility analysis.**
 
-**Version 1.1** — March 2026
+**Version 1.2.0** — April 2026
 
 No software to install. No API keys to configure. Just copy one prompt, paste it into an AI chatbot, describe your invention, and go. Each stage automatically produces the input for the next stage — one copy-paste per stage, six total.
 
@@ -160,7 +160,7 @@ Every prompt is a plain text file. You can edit them to:
 - Technical restatement in patent-ready language
 - Prior art search across patents, papers, products, and open source
 - Full patentability assessment (§101, §102, §103, §112)
-- Examiner rejection simulation
+- Common examiner concerns analysis for this technology area
 - Filing strategy (provisional vs. non-provisional, timing, costs)
 - Claim direction recommendations
 - Risk scoring (0-100) for each statutory category
@@ -203,7 +203,7 @@ PA prompt system/
 
 ---
 
-## What's New in v1.1
+## What's New in v1.2.0
 
 **Reliability improvements based on a full forensic audit and 6-stage stress test.**
 
@@ -221,4 +221,4 @@ PA prompt system/
 
 ---
 
-*Developed and tested on Anthropic's Claude. Gemini Advanced is a supported alternative. Other LLMs lack the context window size required for later stages. Free-tier LLMs are not recommended. v1.1 — March 2026.*
+*Developed and tested on Anthropic's Claude. Gemini Advanced is a supported alternative. Other LLMs lack the context window size required for later stages. Free-tier LLMs are not recommended. v1.2.0 — April 2026.*

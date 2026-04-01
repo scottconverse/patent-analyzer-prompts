@@ -312,7 +312,7 @@
 
 <header>
     <div class="container">
-        <div class="masthead">Open Source &middot; MIT License &middot; Works with Claude &amp; Gemini &middot; v1.1</div>
+        <div class="masthead">Open Source &middot; CC BY-SA 4.0 &middot; Works with Claude &amp; Gemini &middot; v1.2.0</div>
         <h1>Patent Analyzer</h1>
         <p class="subtitle">A free prompt system that turns your invention idea into a professional patent feasibility analysis</p>
     </div>
@@ -368,7 +368,7 @@
             <div class="feature-card">
                 <div class="feature-label">Stage 3</div>
                 <div class="feature-name">Patentability Analysis</div>
-                <div class="feature-desc">Full statutory analysis under &sect;101 (eligibility), &sect;102 (novelty), &sect;103 (obviousness), and &sect;112 (enablement). Includes examiner rejection simulation.</div>
+                <div class="feature-desc">Full statutory analysis under &sect;101 (eligibility), &sect;102 (novelty), &sect;103 (obviousness), and &sect;112 (enablement). Identifies common examiner concerns in this technology area.</div>
             </div>
             <div class="feature-card">
                 <div class="feature-label">Stage 4</div>
@@ -378,7 +378,7 @@
             <div class="feature-card">
                 <div class="feature-label">Stage 5</div>
                 <div class="feature-name">IP Strategy</div>
-                <div class="feature-desc">Concrete filing recommendations: provisional vs. non-provisional, cost estimates, claim strategy, documentation checklist, and a direct file-or-don't-file recommendation.</div>
+                <div class="feature-desc">Concrete filing recommendations: provisional vs. non-provisional, cost estimates, claim strategy, documentation checklist, and a filing landscape assessment.</div>
             </div>
             <div class="feature-card">
                 <div class="feature-label">Stage 6</div>
@@ -467,7 +467,7 @@
             <li><strong>IP Strategy</strong> &mdash; Recommended protection mix, filing strategy, claim directions</li>
             <li><strong>Cost &amp; Timeline</strong> &mdash; What to expect in dollars and years</li>
             <li><strong>Risk Summary</strong> &mdash; Every risk scored 0&ndash;100 with mitigation strategies</li>
-            <li><strong>Bottom-Line Recommendation</strong> &mdash; File now, document more, keep as trade secret, or don't file</li>
+            <li><strong>Overall Landscape Assessment</strong> &mdash; Landscape favors filing, significant obstacles identified, more documentation would strengthen position, or design patent avenue worth exploring</li>
             <li><strong>Plain-English Summary</strong> &mdash; The whole thing explained like you're talking to a friend over coffee</li>
         </ol>
     </div>
@@ -475,15 +475,15 @@
 
 <section class="section">
     <div class="container">
-        <h2>What's New in v1.1</h2>
-        <p class="section-intro">Reliability improvements based on a full forensic audit and end-to-end stress test.</p>
+        <h2>What's New in v1.2.0</h2>
+        <p class="section-intro">UPL compliance revisions &mdash; all prompts repositioned as research tools, not legal advice.</p>
         <ol class="steps">
-            <li><strong>Web search fallback</strong> &mdash; Stage 2 now detects when web search is unavailable, warns you, and marks all references as unverified instead of silently producing unreliable results.</li>
-            <li><strong>URL verification</strong> &mdash; Every prior art reference now requires a verifiable URL. Unverified references are flagged so downstream analysis treats them with appropriate caution.</li>
-            <li><strong>Prior art verification gate</strong> &mdash; Stage 3 checks reference quality before analyzing novelty and caveats any conclusions based on unverified references.</li>
-            <li><strong>Truncation safeguards</strong> &mdash; Handoff blocks at Stages 3&ndash;5 now include priority instructions ensuring the next-stage prompt is always preserved first, preventing corrupted handoffs on long analyses.</li>
-            <li><strong>Cost &amp; legal caveats</strong> &mdash; Cost estimates are date-stamped (as of 2025) with a USPTO fee verification link. Legal references are caveated when web search isn&rsquo;t available.</li>
-            <li><strong>Input quality gate</strong> &mdash; Stage 1 now asks for more detail if your invention description is under 50 words, preventing weak analyses from vague inputs.</li>
+            <li><strong>Research assistant positioning</strong> &mdash; All 6 stages now position the AI as an &ldquo;AI-powered research assistant&rdquo; rather than a patent attorney or strategist.</li>
+            <li><strong>Mandatory disclaimers</strong> &mdash; Every stage output now begins with a disclaimer identifying the output as AI-generated research, not legal advice.</li>
+            <li><strong>Softened section titles</strong> &mdash; &ldquo;File or Don&rsquo;t File&rdquo; is now &ldquo;Filing Landscape Assessment.&rdquo; &ldquo;Bottom-Line Recommendation&rdquo; is now &ldquo;Overall Landscape Assessment.&rdquo; Examiner rejection simulation is now &ldquo;Common Examiner Concerns.&rdquo;</li>
+            <li><strong>Updated assessment labels</strong> &mdash; &ldquo;FILE NOW&rdquo; is now &ldquo;LANDSCAPE FAVORS FILING.&rdquo; &ldquo;DO NOT FILE&rdquo; is now &ldquo;SIGNIFICANT OBSTACLES IDENTIFIED.&rdquo;</li>
+            <li><strong>Fact/judgment separation</strong> &mdash; Stage 3 now uses a Research Findings / Analysis Notes structure to separate factual observations from interpretive analysis.</li>
+            <li><strong>License change</strong> &mdash; License changed from MIT to CC BY-SA 4.0 with a UPL disclaimer retention clause requiring derivative works to preserve all legal disclaimers.</li>
         </ol>
     </div>
 </section>
@@ -542,7 +542,7 @@
             <a href="https://github.com/scottconverse/patent-analyzer-app">Desktop App</a> &middot;
             <a href="https://github.com/scottconverse">More Projects</a>
         </p>
-        <p class="footer-license">MIT License &middot; Free to use, fork, adapt, and share &middot; <a href="terms.html">Terms &amp; Legal</a></p>
+        <p class="footer-license">CC BY-SA 4.0 &middot; Free to use, fork, adapt, and share &middot; <a href="terms.html">Terms &amp; Legal</a></p>
     </div>
 </footer>
 
